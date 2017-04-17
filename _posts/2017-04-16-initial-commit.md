@@ -6,6 +6,7 @@ date:   2017-04-16 11:33:33
 tags: programming software development
 subclass: 'post tag-programming tag-software-development'
 categories: 'mkamhawi'
+disqus: True
 navigation: True
 ---
 
