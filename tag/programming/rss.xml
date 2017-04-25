@@ -12,6 +12,233 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Representing numbers in computers</title>
+	  <link>//representing-numbers-in-computers</link>
+	  <author>Mohamed Elkamhawi</author>
+	  <pubDate>2017-04-25T13:33:33+02:00</pubDate>
+	  <guid>//representing-numbers-in-computers</guid>
+	  <description><![CDATA[
+	     <p>One of the basic laws on which computers were designed and built over time is
+<strong>abstraction</strong>. under the hood all we can see and interact with on computers
+is just a bunch of electronic signals stored and manipulated in magnetic or
+electric form.</p>
+
+<p>Wether it is a great painting by Van Gogh or the latest Tom Hanks movie,
+behind the scene it is just a collection of zeros and ones stored on a disk,
+converted into a collection of colored dots and displayed on a screen.</p>
+
+<p>Any sort of interaction on computers involves a <strong>Decoder/Encoder</strong>, there
+is a continuous process of translation going on between the screen/speaker and
+the storage disk.</p>
+
+<p>All of this was built on a simple mathematical system, the binary system, which
+is used to represent any number by using only two symbols: <strong>0</strong> &amp; <strong>1</strong>.</p>
+
+<p>In this article I’m going to explain how numbers are stored in computers. touching
+these topics:</p>
+
+<ul>
+  <li><a href="#binary_numbers">Binary numbers</a>
+    <ul>
+      <li><a href="#twos_complement">Two’s complement</a></li>
+    </ul>
+  </li>
+  <li><a href="#floating_point">Floating Point</a>
+    <ul>
+      <li><a href="#real_to_float">Converting a real number into a float representation</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="binary_numbers">Binary numbers</h2>
+
+<p>Binary numbers are base 2, meaning that they are written using only two digits:
+0 or 1. each digit is called a <strong><em>bit</em></strong> which is an abbreviation for <strong>bi</strong>nary
+digi<strong>t</strong>.</p>
+
+<p>The position of the bit determines its weight. in the decimal system (base 10),
+the weight of each position to the left is an increasing power of ten.
+starting from ones in the rightmost position <code class="highlighter-rouge">10^0</code>, then tenth <code class="highlighter-rouge">10^1</code>,
+hundreds <code class="highlighter-rouge">10^2</code>, and so on; the same logic applies to the binary system (base 2)
+only with different weights, the rightmost position has the weight <code class="highlighter-rouge">2^0</code>,
+then <code class="highlighter-rouge">2^1</code> to the left of it, then <code class="highlighter-rouge">2^2</code>, and so on.</p>
+
+<p>For example the number:</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code>100101
+</code></pre>
+  </div>
+</blockquote>
+
+<p>to convert this number to the decimal notation, we simply multiply each bit with
+it’s weight and add them all, so from right to left:</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code>1*2^0 + 0*2^1 + 1*2^2 + 0*2^3 + 0*2^4 + 1*2^5
+</code></pre>
+  </div>
+</blockquote>
+
+<p>that is:</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code>1 + 0 + 4 + 0 + 0 + 32 = 37
+</code></pre>
+  </div>
+</blockquote>
+
+<p>The problem with this system is that as it only uses two symbols to represent numbers,
+numbers can occupy larger spaces than in decimal, in the previous example the number <code class="highlighter-rouge">37</code>
+needed 6 digits to be represented in binary.</p>
+
+<p>In programming languages such as <strong>C</strong> or <strong>Java</strong>, there are different value types
+that can hold numbers, the integer <em>int</em> type in most systems is 32-bit wide,
+that can hold numbers from 32 bits of ZEROS to 32 bits of ONES, which represents numbers
+from 0 up to 4,294,967,295 (2^32 - 1). and this is for positive numbers only,
+to represent negative numbers as well, a <em>signed int</em> is used, along with a
+technique called <strong>Two’s complement</strong>.</p>
+
+<h4 id="twos_complement">Two’s complement</h4>
+
+<p>for a successful representation of negative numbers, it must respect a simple
+mathematical rule:</p>
+
+<blockquote>
+  <p>when adding a negative number to it’s positive version, the result is zero.</p>
+</blockquote>
+
+<p>The two’s complement satisfies that rule, to represent the number <code class="highlighter-rouge">-7</code>, start
+with the number <code class="highlighter-rouge">+7</code>, I’ll use a 4-bit representation but the same
+technique applies for 32-bit ints:</p>
+
+<p><code class="highlighter-rouge">7</code> =&gt; <code class="highlighter-rouge">4 + 2 + 1</code> =&gt; <code class="highlighter-rouge">1*2^2 + 1*2^1 + 1*2^0</code> which, stored in a 4-bit
+word is <code class="highlighter-rouge">0111</code>.</p>
+
+<p>By converting each bit of the number <code class="highlighter-rouge">0111</code> to it’s inverse, we get <code class="highlighter-rouge">1000</code>,
+which is the <strong>One’s complement</strong> of <code class="highlighter-rouge">7</code>. adding one to the result, we get <code class="highlighter-rouge">1001</code>,
+which is the <strong>Two’s complement</strong> of <code class="highlighter-rouge">7</code>, aka <code class="highlighter-rouge">-7</code>.</p>
+
+<p>to verify the addition rule:</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code> 0111
++
+ 1001
+=
+ 0000
+</code></pre>
+  </div>
+</blockquote>
+
+<p>the extra <strong><em>carry-out 1</em></strong> overflows out of bounds, hence we get <code class="highlighter-rouge">0000</code> as the result.</p>
+
+<p>In a <em>signed int</em> all negative numbers has a <code class="highlighter-rouge">1</code> in it’s leftmost bit. that
+makes the range that a <em>signed int</em> can hold: <code class="highlighter-rouge">−2,147,483,648</code> <em>(-2^31)</em> to
+<code class="highlighter-rouge">2,147,483,647</code> <em>(2^31 - 1)</em>.</p>
+
+<h2 id="floating_point">Floating Point</h2>
+
+<p>The previous examples demonstrated how integers are represented on computers, but
+<em>int</em> is not the only value type available. to represent <em>Real numbers</em>, <strong>C</strong> and
+other programming languages introduce the <em>float</em> and <em>double</em> types.</p>
+
+<p>The problem with real numbers is the need to always represent them in memory
+in a limited number of bits regardless of the location of the decimal point
+(hence this method is called <em>floating</em> point), so that a float variable
+(which is 32 bit-wide) can hold the number 100.5 or the number 1.005</p>
+
+<p>floating point calculations are done using these equations:</p>
+
+<p><strong>Float equation:</strong> <code class="highlighter-rouge">( -1 )^S * ( 1 + F * 2^-23 ) * 2 ^ ( E - 127 )</code></p>
+
+<p><strong>Double equation:</strong> <code class="highlighter-rouge">( -1 )^S * ( 1 + F * 2^-52 ) * 2 ^ ( E - 1023 )</code></p>
+
+<p><strong>S</strong> <strong><em>(sign bit)</em></strong>, <strong>F</strong> <strong><em>(fraction bits)</em></strong> and <strong>E</strong> <strong><em>(exponent bits)</em></strong>
+are the values stored in memory to represent a real number.</p>
+
+<p>A <em>float</em> variable in <strong>C</strong> is 32 bits-wide, starting from right, the <em>fraction bits (F)</em>
+occupies 23 bits from bit #0 till bit #22, the <em>exponent bits (E)</em> occupies 8 bits
+from bit #23 till bit #30, the <em>sign bit (S)</em> is the leftmost bit (bit #31).</p>
+
+<p>A more precise <em>double</em> variable is 64 bits-wide. the <em>fraction bits (F)</em> occupies
+52 bits from bit #0 till bit #51, the <em>exponent bits (E)</em> occupies 11 bits from
+bit #52 till bit #63, the <em>sign bit (S)</em> is the leftmost bit (bit #64).</p>
+
+<p>for example the number: <code class="highlighter-rouge">0 01111100 00000000000000000000000</code></p>
+
+<p>here the sign bit <strong>S</strong> is <em style="color: red">0</em>, meaning a positive number,
+while the exponent bits <strong>E</strong> are <code class="highlighter-rouge">01111100</code> which is <em style="color: red">124</em>
+in decimal, and the fraction bits <strong>F</strong> equals <em style="color: red">0</em>. replacing
+these values in the float equation:</p>
+
+<p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">0</em> * 2^(-23) )
+* 2 ^ ( <em style="color: red">124</em> - 127 ) = 1 * 1 * 2^(-3) = 0.125</p>
+
+<p>another example: <code class="highlighter-rouge">0 10000101 10010010000000000000000</code></p>
+
+<p>The sign bit <strong>S</strong> is <em style="color: red">0</em>, while the exponent bits <strong>E</strong> are
+<code class="highlighter-rouge">10000101</code> which is <em style="color: red">133</em> in decimal, and the fraction
+bits <strong>F</strong> are <code class="highlighter-rouge">10010010000000000000000</code>, or <em style="color: red">4,784,128</em>
+in decimal. using the float equation:</p>
+
+<p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">4784128</em> * 2^(-23) )
+* 2 ^ ( <em style="color: red">133</em> - 127 ) = 1 * 1.5703125 * 2^6 = 100.5</p>
+
+<h4 id="real_to_float">Converting a real number into a float representation</h4>
+
+<p>To convert a real number like <code class="highlighter-rouge">15.375</code> into a float, convert the integer part <code class="highlighter-rouge">15</code>
+normally to a binary as described <a href="#binary_numbers">here</a>. the result is <code class="highlighter-rouge">1111</code>.</p>
+
+<p>Then multiply the fractional part of the number <code class="highlighter-rouge">0.375</code> by <code class="highlighter-rouge">2</code>, that will yield
+a new real number, separate the integer part in the answer as a bit of the 23 binary
+fraction bits <strong>F</strong> and multiply the fractional part of the answer by <code class="highlighter-rouge">2</code> again,
+repeat until the answer is 0 or filling all the <strong>F</strong> bits.</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code>0.375 * 2 = 0.75 = 0 + 0.75 =&gt; ```0```
+0.750 * 2 = 1.50 = 1 + 0.50 =&gt; ```1```
+0.500 * 2 = 1.00 = 1 + 0.00 =&gt; ```1```
+</code></pre>
+  </div>
+</blockquote>
+
+<p>So the decimal <code class="highlighter-rouge">0.375</code> becomes in binary <code class="highlighter-rouge">0.011</code>, and the whole number
+<code class="highlighter-rouge">15.375</code> becomes <code class="highlighter-rouge">1111.011</code> in binary.</p>
+
+<p>To store this number in memory, saving the information about the position of the decimal
+point as well, insert this number in the equation, shift the binary point <em style="color: red">n</em>
+places to the left so that the result becomes in the form <em style="color: red">1.xxxx</em>
+and multiply the result by 2^<em style="color: red">n</em> to compensate, in this example
+that means shifting the binary point <em style="color: red">3</em> places to the left
+and multiplying the result by 2^<em style="color: red">3</em>:</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code>1111.011 = 1.111011 * 2^3 = 1 + 0.111011 * 2^3
+</code></pre>
+  </div>
+</blockquote>
+
+<p>Comparing <code class="highlighter-rouge">1 + 0.111011 * 2^3</code> with the float equation
+<code class="highlighter-rouge">( -1 )^S * ( 1 + F * 2^-23 ) * 2 ^ ( E - 127 )</code></p>
+
+<p>E - 127 = 3 =&gt; E = 130 =&gt; E is <code class="highlighter-rouge">10000010</code></p>
+
+<p>F * 2^(-23) = 0.111011 =&gt; F is <code class="highlighter-rouge">11101100000000000000000</code></p>
+
+<p>S is <code class="highlighter-rouge">0</code> (a positive number).</p>
+
+<p>So <code class="highlighter-rouge">15.375</code> is stored in computers as <code class="highlighter-rouge">0 10000010 11101100000000000000000</code>.</p>
+
+<p>While floats and doubles do a great job representing real numbers, they are not
+really precise, it is impossible to represent the wide range of real numbers in a
+limited number of bits, so some numbers like <code class="highlighter-rouge">0.1</code> and <code class="highlighter-rouge">0.33</code> are only
+approximated.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Programming as opposed to coding</title>
 	  <link>//initial-commit</link>
 	  <author>Mohamed Elkamhawi</author>
