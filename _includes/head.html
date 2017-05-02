@@ -2,18 +2,33 @@
     <meta name="referrer" content="origin" />
     <link rel="next" href="{{ site.baseurl }}page2/" />
 
+    {% if page.layout == 'post' %}
     <meta property="og:site_name" content="{{ site.name }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ site.name }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:url" content="{{ site.baseurl }}" />
-    <meta property="og:image" content="{{ site.baseurl }}assets/images/cover_dahab.jpg" />
+    <meta content="{{ page.title }}" property="og:title">
+    <meta content="{{ page.content | strip_html | truncatewords: 26 }}" property="og:description">
+    <meta content="article" property="og:type">
+    <meta content="{{ site.url }}{{ page.url | remove: '/' }}" property="og:url">
+    <meta content="{{ site.url }}{{ page.cover }}" property="og:image">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 26 }}" />
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url | remove: '/' }}" />
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.cover }}" />
+    {% else %}
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta content="{{ site.name }}" property="og:title">
+    <meta content="{{ site.description }}" property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="{{ site.url }}" property="og:url" />
+    <meta content="{{ site.url }}assets/images/cover_dahab.jpg" property="og:image">
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ site.name }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
-    <meta name="twitter:url" content="{{ site.baseurl }}" />
-    <meta name="twitter:image:src" content="{{ site.baseurl }}assets/images/cover_dahab.jpg" />
+    <meta name="twitter:url" content="{{ site.url }}" />
+    <meta name="twitter:image:src" content="{{ site.url }}assets/images/cover_dahab.jpg" />
+    {% endif %}
 
     <script type="application/ld+json">
 {
