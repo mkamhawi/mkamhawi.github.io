@@ -38,7 +38,7 @@ prices, but no real innovation.
 
 Different players from both sectors (Transportation & Car manufacturing)
 are now racing to reach the same goal: getting rid of the steering wheel. Startups are
-emerging, old companies are [restructuring](http://www.businessinsider.com/ford-is-no-longer-a-car-company-2017-5),
+emerging, old companies are [restructuring](http://www.businessinsider.com/ford-is-no-longer-a-car-company-2017-5){:target="_blank"},
 whoever reaches this goal first will not only strike a gold mine, but will
 change the way humans live forever.
 
@@ -46,7 +46,7 @@ What is clear now is that developing self-driving vehicles will cause these
 two sectors to merge into one. car companies will no longer sell cars to consumers,
 nobody will need to own a car, instead people will summon cars using their mobile
 phones. cars will patrol the streets dropping off one customer to go to another.
-there are already some [estimates](http://www.cnbc.com/2017/05/23/reporters-notebook-be-warned-us25-oil-is-coming-and-along-with-it-a-new-world-order.html) that using robot-taxis will be 10x cheaper than owning
+there are already some [estimates](http://www.cnbc.com/2017/05/23/reporters-notebook-be-warned-us25-oil-is-coming-and-along-with-it-a-new-world-order.html){:target="_blank"} that using robot-taxis will be 10x cheaper than owning
 a car.
 
 Eliminating the human factor will result in safer trips, the rate of accidents
