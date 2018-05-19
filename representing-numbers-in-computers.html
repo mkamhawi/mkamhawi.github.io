@@ -39,14 +39,14 @@
     <meta content="Representing numbers in computers" property="og:title">
     <meta content="One of the basic laws on which computers were designed and built over time is abstraction. under the hood all we can see and interact with..." property="og:description">
     <meta content="article" property="og:type">
-    <meta content="https://kamhawinotes.com/representing-numbers-in-computers" property="og:url">
-    <meta content="https://kamhawinotes.com/assets/images/numbers.jpeg" property="og:image">
+    <meta content="http://localhost:4000representing-numbers-in-computers" property="og:url">
+    <meta content="http://localhost:4000assets/images/numbers.jpeg" property="og:image">
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Representing numbers in computers" />
     <meta name="twitter:description" content="One of the basic laws on which computers were designed and built over time is abstraction. under the hood all we can see and interact with..." />
-    <meta name="twitter:url" content="https://kamhawinotes.com/representing-numbers-in-computers" />
-    <meta name="twitter:image:src" content="https://kamhawinotes.com/assets/images/numbers.jpeg" />
+    <meta name="twitter:url" content="http://localhost:4000representing-numbers-in-computers" />
+    <meta name="twitter:image:src" content="http://localhost:4000assets/images/numbers.jpeg" />
     
 
     <script type="application/ld+json">
@@ -188,26 +188,23 @@ then <code class="highlighter-rouge">2^1</code> to the left of it, then <code cl
 <p>For example the number:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><pre class="highlight"><code>100101
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100101
+</code></pre></div>  </div>
 </blockquote>
 
 <p>to convert this number to the decimal notation, we simply multiply each bit with
 it’s weight and add them all, so from right to left:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><pre class="highlight"><code>1*2^0 + 0*2^1 + 1*2^2 + 0*2^3 + 0*2^4 + 1*2^5
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1*2^0 + 0*2^1 + 1*2^2 + 0*2^3 + 0*2^4 + 1*2^5
+</code></pre></div>  </div>
 </blockquote>
 
 <p>that is:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><pre class="highlight"><code>1 + 0 + 4 + 0 + 0 + 32 = 37
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 + 0 + 4 + 0 + 0 + 32 = 37
+</code></pre></div>  </div>
 </blockquote>
 
 <p>The problem with this system is that as it only uses two symbols to represent numbers,
@@ -244,13 +241,12 @@ which is the <strong>Two’s complement</strong> of <code class="highlighter-rou
 <p>to verify the addition rule:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><pre class="highlight"><code> 0111
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 0111
 +
  1001
 =
  0000
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 </blockquote>
 
 <p>the extra <strong><em>carry-out 1</em></strong> overflows out of bounds, hence we get <code class="highlighter-rouge">0000</code> as the result.</p>
@@ -294,8 +290,10 @@ while the exponent bits <strong>E</strong> are <code class="highlighter-rouge">0
 in decimal, and the fraction bits <strong>F</strong> equals <em style="color: red">0</em>. replacing
 these values in the float equation:</p>
 
-<p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">0</em> * 2^(-23) )
-* 2 ^ ( <em style="color: red">124</em> - 127 ) = 1 * 1 * 2^(-3) = 0.125</p>
+<p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">0</em> * 2^(-23) )</p>
+<ul>
+  <li>2 ^ ( <em style="color: red">124</em> - 127 ) = 1 * 1 * 2^(-3) = 0.125</li>
+</ul>
 
 <p>another example: <code class="highlighter-rouge">0 10000101 10010010000000000000000</code></p>
 
@@ -304,8 +302,10 @@ these values in the float equation:</p>
 bits <strong>F</strong> are <code class="highlighter-rouge">10010010000000000000000</code>, or <em style="color: red">4,784,128</em>
 in decimal. using the float equation:</p>
 
-<p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">4784128</em> * 2^(-23) )
-* 2 ^ ( <em style="color: red">133</em> - 127 ) = 1 * 1.5703125 * 2^6 = 100.5</p>
+<p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">4784128</em> * 2^(-23) )</p>
+<ul>
+  <li>2 ^ ( <em style="color: red">133</em> - 127 ) = 1 * 1.5703125 * 2^6 = 100.5</li>
+</ul>
 
 <h4 id="real_to_float">Converting a real number into a float representation</h4>
 
@@ -318,11 +318,10 @@ fraction bits <strong>F</strong> and multiply the fractional part of the answer 
 repeat until the answer is 0 or filling all the <strong>F</strong> bits.</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><pre class="highlight"><code>0.375 * 2 = 0.75 = 0 + 0.75 =&gt; ```0```
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.375 * 2 = 0.75 = 0 + 0.75 =&gt; ```0```
 0.750 * 2 = 1.50 = 1 + 0.50 =&gt; ```1```
 0.500 * 2 = 1.00 = 1 + 0.00 =&gt; ```1```
-</code></pre>
-  </div>
+</code></pre></div>  </div>
 </blockquote>
 
 <p>So the decimal <code class="highlighter-rouge">0.375</code> becomes in binary <code class="highlighter-rouge">0.011</code>, and the whole number
@@ -336,9 +335,8 @@ that means shifting the binary point <em style="color: red">3</em> places to the
 and multiplying the result by 2^<em style="color: red">3</em>:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><pre class="highlight"><code>1111.011 = 1.111011 * 2^3 = 1 + 0.111011 * 2^3
-</code></pre>
-  </div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1111.011 = 1.111011 * 2^3 = 1 + 0.111011 * 2^3
+</code></pre></div>  </div>
 </blockquote>
 
 <p>Comparing <code class="highlighter-rouge">1 + 0.111011 * 2^3</code> with the float equation
@@ -379,7 +377,7 @@ approximated.</p>
                 
                 <div class="author-meta">
                     <span class="author-location icon-location"> Cairo, Egypt</span>
-                    <span class="author-link icon-link"><a href="https://kamhawinotes.com/"> https://kamhawinotes.com/</a></span>
+                    <span class="author-link icon-link"><a href="http://localhost:4000"> https://kamhawinotes.com/</a></span>
                 </div>
             </section>
 
@@ -387,15 +385,15 @@ approximated.</p>
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="http://twitter.com/share?text=Representing numbers in computers&amp;url=https://kamhawinotes.com/representing-numbers-in-computers"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Representing numbers in computers&amp;url=http://localhost:4000representing-numbers-in-computers"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://kamhawinotes.com/representing-numbers-in-computers"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000representing-numbers-in-computers"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://kamhawinotes.com/representing-numbers-in-computers"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:4000representing-numbers-in-computers"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
@@ -408,7 +406,7 @@ approximated.</p>
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'kamhawi-notes'; // required: replace example with your forum shortname
         var disqus_identifier = '/representing-numbers-in-computers';
-        var disqus_url = 'https://kamhawinotes.com//representing-numbers-in-computers';
+        var disqus_url = 'http://localhost:4000/representing-numbers-in-computers';
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
@@ -457,7 +455,7 @@ approximated.</p>
 
 
         <footer class="site-footer clearfix">
-          <section class="copyright"><a href="/">Kamhawi Notes</a> &copy; 2017</section>
+          <section class="copyright"><a href="/">Kamhawi Notes</a> &copy; 2018</section>
           <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using <a href="https://github.com/biomadeira/jasper" target="_blank">Jasper</a></section>
         </footer>
     </div>
