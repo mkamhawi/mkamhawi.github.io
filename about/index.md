@@ -27,14 +27,6 @@ using <a href="https://github.com/biomadeira/jasper" target="_blank">Jasper</a>.
   </span>
 {% endif %}
 
-{% if site.gitlab %}
-  <span>
-    <a href="https://gitlab.com/{{ site.gitlab }}" target="_blank" class="social-link">
-      <i class="fa fa-gitlab" aria-hidden="true"></i>
-    </a>
-  </span>
-{% endif %}
-
 {% if site.linkedin %}
   <span>
     <a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" class="social-link">

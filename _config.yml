@@ -25,7 +25,6 @@ google_analytics: 'UA-97464899-1'
 disqus: 'kamhawi-notes'
 twitter: 'mkamhawi'
 github: 'mkamhawi'
-gitlab: 'mkamhawi'
 linkedin: 'mkamhawi'
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: '/'
@@ -37,7 +36,7 @@ permalink: /:title
 
 
 # gems and other configs
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 exclude: [vendor]
 
 # Additional settings available on the front-matter
