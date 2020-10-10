@@ -278,15 +278,15 @@ digi<strong>t</strong>.</p>
 
 <p>The position of the bit determines its weight. in the decimal system (base 10),
 the weight of each position to the left is an increasing power of ten.
-starting from ones in the rightmost position <code class="highlighter-rouge">10^0</code>, then tenth <code class="highlighter-rouge">10^1</code>,
-hundreds <code class="highlighter-rouge">10^2</code>, and so on; the same logic applies to the binary system (base 2)
-only with different weights, the rightmost position has the weight <code class="highlighter-rouge">2^0</code>,
-then <code class="highlighter-rouge">2^1</code> to the left of it, then <code class="highlighter-rouge">2^2</code>, and so on.</p>
+starting from ones in the rightmost position <code class="language-plaintext highlighter-rouge">10^0</code>, then tenth <code class="language-plaintext highlighter-rouge">10^1</code>,
+hundreds <code class="language-plaintext highlighter-rouge">10^2</code>, and so on; the same logic applies to the binary system (base 2)
+only with different weights, the rightmost position has the weight <code class="language-plaintext highlighter-rouge">2^0</code>,
+then <code class="language-plaintext highlighter-rouge">2^1</code> to the left of it, then <code class="language-plaintext highlighter-rouge">2^2</code>, and so on.</p>
 
 <p>For example the number:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100101
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100101
 </code></pre></div>  </div>
 </blockquote>
 
@@ -294,19 +294,19 @@ then <code class="highlighter-rouge">2^1</code> to the left of it, then <code cl
 it’s weight and add them all, so from right to left:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1*2^0 + 0*2^1 + 1*2^2 + 0*2^3 + 0*2^4 + 1*2^5
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1*2^0 + 0*2^1 + 1*2^2 + 0*2^3 + 0*2^4 + 1*2^5
 </code></pre></div>  </div>
 </blockquote>
 
 <p>that is:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 + 0 + 4 + 0 + 0 + 32 = 37
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 + 0 + 4 + 0 + 0 + 32 = 37
 </code></pre></div>  </div>
 </blockquote>
 
 <p>The problem with this system is that as it only uses two symbols to represent numbers,
-numbers can occupy larger spaces than in decimal, in the previous example the number <code class="highlighter-rouge">37</code>
+numbers can occupy larger spaces than in decimal, in the previous example the number <code class="language-plaintext highlighter-rouge">37</code>
 needed 6 digits to be represented in binary.</p>
 
 <p>In programming languages such as <strong>C</strong> or <strong>Java</strong>, there are different value types
@@ -325,21 +325,21 @@ mathematical rule:</p>
   <p>when adding a negative number to it’s positive version, the result is zero.</p>
 </blockquote>
 
-<p>The two’s complement satisfies that rule, to represent the number <code class="highlighter-rouge">-7</code>, start
-with the number <code class="highlighter-rouge">+7</code>, I’ll use a 4-bit representation but the same
+<p>The two’s complement satisfies that rule, to represent the number <code class="language-plaintext highlighter-rouge">-7</code>, start
+with the number <code class="language-plaintext highlighter-rouge">+7</code>, I’ll use a 4-bit representation but the same
 technique applies for 32-bit ints:</p>
 
-<p><code class="highlighter-rouge">7</code> =&gt; <code class="highlighter-rouge">4 + 2 + 1</code> =&gt; <code class="highlighter-rouge">1*2^2 + 1*2^1 + 1*2^0</code> which, stored in a 4-bit
-word is <code class="highlighter-rouge">0111</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">7</code> =&gt; <code class="language-plaintext highlighter-rouge">4 + 2 + 1</code> =&gt; <code class="language-plaintext highlighter-rouge">1*2^2 + 1*2^1 + 1*2^0</code> which, stored in a 4-bit
+word is <code class="language-plaintext highlighter-rouge">0111</code>.</p>
 
-<p>By converting each bit of the number <code class="highlighter-rouge">0111</code> to it’s inverse, we get <code class="highlighter-rouge">1000</code>,
-which is the <strong>One’s complement</strong> of <code class="highlighter-rouge">7</code>. adding one to the result, we get <code class="highlighter-rouge">1001</code>,
-which is the <strong>Two’s complement</strong> of <code class="highlighter-rouge">7</code>, aka <code class="highlighter-rouge">-7</code>.</p>
+<p>By converting each bit of the number <code class="language-plaintext highlighter-rouge">0111</code> to it’s inverse, we get <code class="language-plaintext highlighter-rouge">1000</code>,
+which is the <strong>One’s complement</strong> of <code class="language-plaintext highlighter-rouge">7</code>. adding one to the result, we get <code class="language-plaintext highlighter-rouge">1001</code>,
+which is the <strong>Two’s complement</strong> of <code class="language-plaintext highlighter-rouge">7</code>, aka <code class="language-plaintext highlighter-rouge">-7</code>.</p>
 
 <p>to verify the addition rule:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 0111
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 0111
 +
  1001
 =
@@ -347,11 +347,11 @@ which is the <strong>Two’s complement</strong> of <code class="highlighter-rou
 </code></pre></div>  </div>
 </blockquote>
 
-<p>the extra <strong><em>carry-out 1</em></strong> overflows out of bounds, hence we get <code class="highlighter-rouge">0000</code> as the result.</p>
+<p>the extra <strong><em>carry-out 1</em></strong> overflows out of bounds, hence we get <code class="language-plaintext highlighter-rouge">0000</code> as the result.</p>
 
-<p>In a <em>signed int</em> all negative numbers has a <code class="highlighter-rouge">1</code> in it’s leftmost bit. that
-makes the range that a <em>signed int</em> can hold: <code class="highlighter-rouge">−2,147,483,648</code> <em>(-2^31)</em> to
-<code class="highlighter-rouge">2,147,483,647</code> <em>(2^31 - 1)</em>.</p>
+<p>In a <em>signed int</em> all negative numbers has a <code class="language-plaintext highlighter-rouge">1</code> in it’s leftmost bit. that
+makes the range that a <em>signed int</em> can hold: <code class="language-plaintext highlighter-rouge">−2,147,483,648</code> <em>(-2^31)</em> to
+<code class="language-plaintext highlighter-rouge">2,147,483,647</code> <em>(2^31 - 1)</em>.</p>
 
 <h2 id="floating_point">Floating Point</h2>
 
@@ -366,9 +366,9 @@ in a limited number of bits regardless of the location of the decimal point
 
 <p>floating point calculations are done using these equations:</p>
 
-<p><strong>Float equation:</strong> <code class="highlighter-rouge">( -1 )^S * ( 1 + F * 2^-23 ) * 2 ^ ( E - 127 )</code></p>
+<p><strong>Float equation:</strong> <code class="language-plaintext highlighter-rouge">( -1 )^S * ( 1 + F * 2^-23 ) * 2 ^ ( E - 127 )</code></p>
 
-<p><strong>Double equation:</strong> <code class="highlighter-rouge">( -1 )^S * ( 1 + F * 2^-52 ) * 2 ^ ( E - 1023 )</code></p>
+<p><strong>Double equation:</strong> <code class="language-plaintext highlighter-rouge">( -1 )^S * ( 1 + F * 2^-52 ) * 2 ^ ( E - 1023 )</code></p>
 
 <p><strong>S</strong> <strong><em>(sign bit)</em></strong>, <strong>F</strong> <strong><em>(fraction bits)</em></strong> and <strong>E</strong> <strong><em>(exponent bits)</em></strong>
 are the values stored in memory to represent a real number.</p>
@@ -381,10 +381,10 @@ from bit #23 till bit #30, the <em>sign bit (S)</em> is the leftmost bit (bit #3
 52 bits from bit #0 till bit #51, the <em>exponent bits (E)</em> occupies 11 bits from
 bit #52 till bit #63, the <em>sign bit (S)</em> is the leftmost bit (bit #64).</p>
 
-<p>for example the number: <code class="highlighter-rouge">0 01111100 00000000000000000000000</code></p>
+<p>for example the number: <code class="language-plaintext highlighter-rouge">0 01111100 00000000000000000000000</code></p>
 
 <p>here the sign bit <strong>S</strong> is <em style="color: red">0</em>, meaning a positive number,
-while the exponent bits <strong>E</strong> are <code class="highlighter-rouge">01111100</code> which is <em style="color: red">124</em>
+while the exponent bits <strong>E</strong> are <code class="language-plaintext highlighter-rouge">01111100</code> which is <em style="color: red">124</em>
 in decimal, and the fraction bits <strong>F</strong> equals <em style="color: red">0</em>. replacing
 these values in the float equation:</p>
 
@@ -393,11 +393,11 @@ these values in the float equation:</p>
   <li>2 ^ ( <em style="color: red">124</em> - 127 ) = 1 * 1 * 2^(-3) = 0.125</li>
 </ul>
 
-<p>another example: <code class="highlighter-rouge">0 10000101 10010010000000000000000</code></p>
+<p>another example: <code class="language-plaintext highlighter-rouge">0 10000101 10010010000000000000000</code></p>
 
 <p>The sign bit <strong>S</strong> is <em style="color: red">0</em>, while the exponent bits <strong>E</strong> are
-<code class="highlighter-rouge">10000101</code> which is <em style="color: red">133</em> in decimal, and the fraction
-bits <strong>F</strong> are <code class="highlighter-rouge">10010010000000000000000</code>, or <em style="color: red">4,784,128</em>
+<code class="language-plaintext highlighter-rouge">10000101</code> which is <em style="color: red">133</em> in decimal, and the fraction
+bits <strong>F</strong> are <code class="language-plaintext highlighter-rouge">10010010000000000000000</code>, or <em style="color: red">4,784,128</em>
 in decimal. using the float equation:</p>
 
 <p>(-1) ^ <em style="color: red">0</em> * ( 1 + <em style="color: red">4784128</em> * 2^(-23) )</p>
@@ -407,23 +407,23 @@ in decimal. using the float equation:</p>
 
 <h4 id="real_to_float">Converting a real number into a float representation</h4>
 
-<p>To convert a real number like <code class="highlighter-rouge">15.375</code> into a float, convert the integer part <code class="highlighter-rouge">15</code>
-normally to a binary as described <a href="#binary_numbers">here</a>. the result is <code class="highlighter-rouge">1111</code>.</p>
+<p>To convert a real number like <code class="language-plaintext highlighter-rouge">15.375</code> into a float, convert the integer part <code class="language-plaintext highlighter-rouge">15</code>
+normally to a binary as described <a href="#binary_numbers">here</a>. the result is <code class="language-plaintext highlighter-rouge">1111</code>.</p>
 
-<p>Then multiply the fractional part of the number <code class="highlighter-rouge">0.375</code> by <code class="highlighter-rouge">2</code>, that will yield
+<p>Then multiply the fractional part of the number <code class="language-plaintext highlighter-rouge">0.375</code> by <code class="language-plaintext highlighter-rouge">2</code>, that will yield
 a new real number, separate the integer part in the answer as a bit of the 23 binary
-fraction bits <strong>F</strong> and multiply the fractional part of the answer by <code class="highlighter-rouge">2</code> again,
+fraction bits <strong>F</strong> and multiply the fractional part of the answer by <code class="language-plaintext highlighter-rouge">2</code> again,
 repeat until the answer is 0 or filling all the <strong>F</strong> bits.</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.375 * 2 = 0.75 = 0 + 0.75 =&gt; ```0```
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.375 * 2 = 0.75 = 0 + 0.75 =&gt; ```0```
 0.750 * 2 = 1.50 = 1 + 0.50 =&gt; ```1```
 0.500 * 2 = 1.00 = 1 + 0.00 =&gt; ```1```
 </code></pre></div>  </div>
 </blockquote>
 
-<p>So the decimal <code class="highlighter-rouge">0.375</code> becomes in binary <code class="highlighter-rouge">0.011</code>, and the whole number
-<code class="highlighter-rouge">15.375</code> becomes <code class="highlighter-rouge">1111.011</code> in binary.</p>
+<p>So the decimal <code class="language-plaintext highlighter-rouge">0.375</code> becomes in binary <code class="language-plaintext highlighter-rouge">0.011</code>, and the whole number
+<code class="language-plaintext highlighter-rouge">15.375</code> becomes <code class="language-plaintext highlighter-rouge">1111.011</code> in binary.</p>
 
 <p>To store this number in memory, saving the information about the position of the decimal
 point as well, insert this number in the equation, shift the binary point <em style="color: red">n</em>
@@ -433,24 +433,24 @@ that means shifting the binary point <em style="color: red">3</em> places to the
 and multiplying the result by 2^<em style="color: red">3</em>:</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1111.011 = 1.111011 * 2^3 = 1 + 0.111011 * 2^3
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1111.011 = 1.111011 * 2^3 = 1 + 0.111011 * 2^3
 </code></pre></div>  </div>
 </blockquote>
 
-<p>Comparing <code class="highlighter-rouge">1 + 0.111011 * 2^3</code> with the float equation
-<code class="highlighter-rouge">( -1 )^S * ( 1 + F * 2^-23 ) * 2 ^ ( E - 127 )</code></p>
+<p>Comparing <code class="language-plaintext highlighter-rouge">1 + 0.111011 * 2^3</code> with the float equation
+<code class="language-plaintext highlighter-rouge">( -1 )^S * ( 1 + F * 2^-23 ) * 2 ^ ( E - 127 )</code></p>
 
-<p>E - 127 = 3 =&gt; E = 130 =&gt; E is <code class="highlighter-rouge">10000010</code></p>
+<p>E - 127 = 3 =&gt; E = 130 =&gt; E is <code class="language-plaintext highlighter-rouge">10000010</code></p>
 
-<p>F * 2^(-23) = 0.111011 =&gt; F is <code class="highlighter-rouge">11101100000000000000000</code></p>
+<p>F * 2^(-23) = 0.111011 =&gt; F is <code class="language-plaintext highlighter-rouge">11101100000000000000000</code></p>
 
-<p>S is <code class="highlighter-rouge">0</code> (a positive number).</p>
+<p>S is <code class="language-plaintext highlighter-rouge">0</code> (a positive number).</p>
 
-<p>So <code class="highlighter-rouge">15.375</code> is stored in computers as <code class="highlighter-rouge">0 10000010 11101100000000000000000</code>.</p>
+<p>So <code class="language-plaintext highlighter-rouge">15.375</code> is stored in computers as <code class="language-plaintext highlighter-rouge">0 10000010 11101100000000000000000</code>.</p>
 
 <p>While floats and doubles do a great job representing real numbers, they are not
 really precise, it is impossible to represent the wide range of real numbers in a
-limited number of bits, so some numbers like <code class="highlighter-rouge">0.1</code> and <code class="highlighter-rouge">0.33</code> are only
+limited number of bits, so some numbers like <code class="language-plaintext highlighter-rouge">0.1</code> and <code class="language-plaintext highlighter-rouge">0.33</code> are only
 approximated.</p>
 
 	  ]]></description>

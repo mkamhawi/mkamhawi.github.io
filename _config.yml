@@ -14,8 +14,7 @@ description: 'The blog of Mohamed Elkamhawi'
 author: 'Mohamed Elkamhawi'
 # edit 'categories' in the front matter of every post to match this username
 nickname: 'mkamhawi'
-bio: 'Passionate about languages since infancy. I speak Arabic, English, French,
-and Code.'
+bio: 'I speak Arabic, English, French, and Code.'
 location: 'Cairo, Egypt'
 url: 'https://kamhawinotes.com/'
 image: 'assets/images/profile33.jpg'
