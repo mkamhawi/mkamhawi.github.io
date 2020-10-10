@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/blockchain.jpg'
+cover: 'assets/images/cover_blockchain.jpg'
 title: "What is Blockchain and how does Bitcoin work"
 date:   2017-12-23 11:33:33
 tags: tech computers blockchain bitcoin

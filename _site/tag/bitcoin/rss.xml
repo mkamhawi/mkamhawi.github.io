@@ -5,7 +5,7 @@
    
       <title>https://kamhawinotes.com/</title>
    
-   <link>http://localhost:4000</link>
+   <link>https://kamhawinotes.com/</link>
    <description>The blog of Mohamed Elkamhawi</description>
    <language>en-uk</language>
    <managingEditor> Mohamed Elkamhawi</managingEditor>
@@ -13,10 +13,10 @@
    
 	<item>
 	  <title>What is Blockchain and how does Bitcoin work</title>
-	  <link>//blockchain-and-bitcoin</link>
+	  <link>/blockchain-and-bitcoin</link>
 	  <author>Mohamed Elkamhawi</author>
 	  <pubDate>2017-12-23T13:33:33+02:00</pubDate>
-	  <guid>//blockchain-and-bitcoin</guid>
+	  <guid>/blockchain-and-bitcoin</guid>
 	  <description><![CDATA[
 	     <p>Blockchain is great technology, it promises to disturb and change a number of
 industries that is not limited to the technology scene.</p>
@@ -46,7 +46,7 @@ according to rules defined in the software, the code on which the system runs.</
 
 <h4 id="history-of-the-bitcoin">History of the bitcoin</h4>
 
-<p><img src="http://localhost:4000/assets/images/bitcoin.png" alt="bitcoin logo" width="250px" align="right" /></p>
+<p><img src="https://kamhawinotes.com//assets/images/bitcoin.png" alt="bitcoin logo" width="250px" align="right" /></p>
 
 <p>in 18 August 2008, the domain name <a href="https://bitcoin.org" target="_blank">bitcoin.org</a>
 was registered. In November that year, a link to a paper authored by <em>Satoshi Nakamoto</em>
@@ -60,7 +60,7 @@ open source code and released it in January 2009.</p>
 the first ever block on the chain, known as the genesis block, for a reward of
 50 bitcoins.</p>
 
-<p><img src="http://localhost:4000/assets/images/times.png" alt="The Times Jan 3rd headline" width="250px" align="right" />
+<p><img src="https://kamhawinotes.com//assets/images/times.png" alt="The Times Jan 3rd headline" width="250px" align="right" />
 Embedded in the coinbase of this block was the following text:</p>
 
 <blockquote>
@@ -84,7 +84,7 @@ purchase two pizzas delivered by Papa John’s.</p>
 continuously growing list of records, called blocks, which are linked and secured
 using cryptography.</p>
 
-<p><img src="http://localhost:4000/assets/images/bc.jpeg" alt="The blockchain" width="700px" /></p>
+<p><img src="https://kamhawinotes.com//assets/images/bc.jpeg" alt="The blockchain" width="700px" /></p>
 
 <p>The bitcoin blockchain is a huge public ledger (over 136 GB as of October 2017),
 keeping records of all the transactions happening within the system.</p>
@@ -135,7 +135,7 @@ a rate faster than the original branch of the network, for his branch to be
 considered legitimate. an attacker can theoretically achieve this if he owns
 more than 50% of the computing power in the network, which is impossible.</p>
 
-<p><img src="http://localhost:4000/assets/images/bc-attack.png" alt="Blockchain attack" width="700px" /></p>
+<p><img src="https://kamhawinotes.com//assets/images/bc-attack.png" alt="Blockchain attack" width="700px" /></p>
 
 <h2 id="other-applications-for-the-blockchain-technology">Other applications for the Blockchain technology</h2>
 

@@ -5,7 +5,7 @@
    
       <title>https://kamhawinotes.com/</title>
    
-   <link>http://localhost:4000</link>
+   <link>https://kamhawinotes.com/</link>
    <description>The blog of Mohamed Elkamhawi</description>
    <language>en-uk</language>
    <managingEditor> Mohamed Elkamhawi</managingEditor>
@@ -13,10 +13,10 @@
    
 	<item>
 	  <title>Representing numbers in computers</title>
-	  <link>//representing-numbers-in-computers</link>
+	  <link>/representing-numbers-in-computers</link>
 	  <author>Mohamed Elkamhawi</author>
 	  <pubDate>2017-04-25T13:33:33+02:00</pubDate>
-	  <guid>//representing-numbers-in-computers</guid>
+	  <guid>/representing-numbers-in-computers</guid>
 	  <description><![CDATA[
 	     <p>One of the basic laws on which computers were designed and built over time is
 <strong>abstraction</strong>. under the hood all we can see and interact with on computers
@@ -238,10 +238,10 @@ approximated.</p>
 
 	<item>
 	  <title>Clean Code: A Necessity for Business Success</title>
-	  <link>//initial-commit</link>
+	  <link>/initial-commit</link>
 	  <author>Mohamed Elkamhawi</author>
 	  <pubDate>2017-04-16T13:33:33+02:00</pubDate>
-	  <guid>//initial-commit</guid>
+	  <guid>/initial-commit</guid>
 	  <description><![CDATA[
 	     <p>Writing a program is not very different from writing a novel. a program has to
 have a beginning and an end, it must be structured in a logical way, it must
