@@ -1,11 +1,12 @@
 ---
 layout: post
-cover: 'assets/images/cover_blockchain.jpg'
+image: 
+    src: '/assets/images/cover_blockchain.jpg'
 title: "What is Blockchain and how does Bitcoin work"
 date:   2017-12-23 11:33:33
 tags: tech computers blockchain bitcoin
 subclass: 'post tag-tech tag-computers tag-blockchain tag-bitcoin'
-categories: 'mkamhawi'
+categories: 'Tech'
 disqus: True
 navigation: True
 ---
@@ -38,7 +39,7 @@ according to rules defined in the software, the code on which the system runs.
 
 #### History of the bitcoin
 
-![bitcoin logo]({{ "/assets/images/bitcoin.png" | absolute_url }}){:width="250px" align="right"}
+![bitcoin logo](/assets/images/bitcoin.png){:width="250px" .right}
 
 in 18 August 2008, the domain name [bitcoin.org](https://bitcoin.org){:target="_blank"}
 was registered. In November that year, a link to a paper authored by *Satoshi Nakamoto*
@@ -52,7 +53,7 @@ In January 2009, the bitcoin network came into existence after *Satoshi* mined
 the first ever block on the chain, known as the genesis block, for a reward of
 50 bitcoins.
 
-![The Times Jan 3rd headline]({{ "/assets/images/times.png" | absolute_url }}){:width="250px" align="right"}
+![The Times Jan 3rd headline](/assets/images/times.png){:width="250px" .right}
 Embedded in the coinbase of this block was the following text:
 
 >  “The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.”
@@ -75,7 +76,7 @@ Bitcoin is built on the technology called *blockchain*. Blockchain is a
 continuously growing list of records, called blocks, which are linked and secured
 using cryptography.
 
-![The blockchain]({{ "/assets/images/bc.jpeg" | absolute_url }}){:width="700px"}
+![The blockchain](/assets/images/bc.jpeg){:width="700px"}
 
 The bitcoin blockchain is a huge public ledger (over 136 GB as of October 2017),
 keeping records of all the transactions happening within the system.

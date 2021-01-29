@@ -1,59 +1,51 @@
+---
+layout: compress
+# Default layout
+---
+
 <!DOCTYPE html>
-<html>
-<head>
-    <!-- [[! Document Settings ]] -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- [[! Page Meta ]] -->
-    <title>{% if page.title %}{{ page.title }}{% elsif site.name %}{{ site.name }}{% endif %}</title>
-    <meta name="description" content="{{ site.name }} - {{ site.description }}" />
+{% capture prefer_mode %}
+  {% if site.theme_mode %}
+    mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="{{ site.lang | split: "_" | first | default: "en" }}" {{ prefer_mode }}>
 
-    <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico" >
+  {% include head.html %}
 
-    <!-- [[! Styles'n'Scripts ]] -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/css/screen.css" />
-    <link rel="stylesheet" type="text/css"
-          href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/css/syntax.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-              rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-              crossorigin="anonymous">
+  <body data-spy="scroll" data-target="#toc">
 
-    <!-- [[! highlight.js ]] -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    {% include sidebar.html %}
 
-    <!-- [[! Ghost outputs important style and meta data with this tag ]] -->
-    {% include head.html %}
+    {% include topbar.html %}
 
-</head>
-<body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %} nav-closed">
+    <div id="main-wrapper">
+      <div id="main">
 
-    {% include navigation.html %}
+        {% include refactor-content.html content=content %}
 
-    <div class="site-wrapper">
+        {% include footer.html %}
 
-        <!-- [[! Everything else gets inserted here ]] -->
-        {{ content }}
+      </div>
 
-        <footer class="site-footer clearfix">
-          <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; {{  site.time | date: '%Y' }}</section>
-          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using <a href="https://github.com/biomadeira/jasper" target="_blank">Jasper</a></section>
-        </footer>
-    </div>
-    <!-- [[! Ghost outputs important scripts and data with this tag ]] -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- [[! The main JavaScript file for Casper ]] -->
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/index.js"></script>
+      {% include search-results.html %}
 
-    <!-- Add Google Analytics  -->
-    {% include analytics.html %}
-</body>
+    </div> <!-- #main-wrapper -->
+
+    {% if page.mermaid %}
+      {% include mermaid.html %}
+    {% endif %}
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    {% include search-loader.html %}
+
+  </body>
+
 </html>

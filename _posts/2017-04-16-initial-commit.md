@@ -1,11 +1,12 @@
 ---
 layout: post
-cover: 'assets/images/cover1.jpg'
+image: 
+    src: '/assets/images/cover1.jpg'
 title: 'Clean Code: A Necessity for Business Success'
 date:   2017-04-16 11:33:33
 tags: programming software development
 subclass: 'post tag-programming tag-software-development'
-categories: 'mkamhawi'
+categories: 'Tech'
 disqus: True
 navigation: True
 ---

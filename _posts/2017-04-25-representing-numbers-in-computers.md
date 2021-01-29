@@ -1,11 +1,13 @@
 ---
 layout: post
-cover: 'assets/images/numbers.jpeg'
+image: 
+  src: '/assets/images/numbers.jpeg'
+  alt: 'binary numbers'
 title: Representing numbers in computers
 date:   2017-04-25 11:33:33
 tags: programming computers
 subclass: 'post tag-programming tag-computers'
-categories: 'mkamhawi'
+categories: 'Tech'
 disqus: True
 navigation: True
 ---

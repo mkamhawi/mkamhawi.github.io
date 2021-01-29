@@ -1,11 +1,13 @@
 ---
 layout: post
-cover: 'assets/images/autonomous-vehicles.png'
+image: 
+    src: '/assets/images/autonomous-vehicles.png'
+    alt: Self driven car
 title: "Autonomous Vehicles: The Next Disruptive Technology"
 date:   2017-06-02 11:33:33
 tags: tech computers self-driving-cars
 subclass: 'post tag-tech tag-computers tag-self-driving-cars'
-categories: 'mkamhawi'
+categories: 'Tech'
 disqus: True
 navigation: True
 ---
@@ -61,7 +63,7 @@ Another thing that is going to change is the absurd notion that every one should
 have his/her own car. Fewer cars will serve more people, resulting in fewer street
 congestions, less time on the road and higher productivity.
 
-*Transport As A Service (TAAS)* is going to be the norm. granted, a lot of people
+*Transport as a Service (TAAS)* is going to be the norm. granted, a lot of people
 will lose their jobs, mainly drivers as well as people working in the vehicle distribution
 sector. but new sectors will emerge, new jobs will be created, and people will
 enjoy less routine and more life.

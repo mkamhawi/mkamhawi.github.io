@@ -1,42 +1,34 @@
 ---
 layout: default
-class: 'page-template'
+# The page layout
 ---
-<!-- < default -->
 
-<!-- This is a page template. A page outputs content just like any other post, and has all the same -->
-    <!-- attributes by default, but you can also customise it to behave differently if you prefer.  -->
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
+    {% if page.dynamic_title %}
+      <h1 class="dynamic-title">{{ page.title }}</h1>
+      <div class="post-content">
+        {{ content }}
+      </div>
+    {% else %}
+      {{ content }}
+    {% endif %}
+    </div> <!-- #page -->
+  </div><!-- .col-12 -->
 
-<!-- Everything inside the #post tags pulls data from the page -->
-<!-- #post -->
+  {% include panel.html %}
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ site.baseurl }}{{ page.cover }}){% else %}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %}overlay{% endif %} clearfix">
-        {% if page.logo %}
-          <a class="blog-logo" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{{ page.logo }}" alt="Blog Logo" /></a>
-        {% else %}
-          <a class="blog-logo home-link" href="{{ site.baseurl }}"><i class="fa fa-home" aria-hidden="true"></i>home</a>
-        {% endif %}
-        {% if page.navigation %}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-            {{ include navigation.html }}
-        {% endif %}
-    </nav>
-</header>
+</div>
 
-<main class="content" role="main">
-    <article class="post">
-        <!-- Everything inside the #post tags pulls data from the post -->
+{% if site.disqus.comments and page.comments %}
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-        </header>
+    {% include disqus.html %}
 
-        <section class="post-content">
-            {{content}}
-        </section>
-
-    </article>
-
-</main>
-<!-- /post -->
+    </div> <!-- .pl-1 pr-1 -->
+  </div> <!-- .col-12 -->
+</div> <!-- .row -->
+{% endif %}
