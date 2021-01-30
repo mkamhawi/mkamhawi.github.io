@@ -92,6 +92,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+microsoft_bing_verification: '58304BEBE805F5226043CF1198B75B76'
+
 google_analytics:
   id: 'UA-97464899-1'     # Fill with your Google Analytics ID
   pv:
