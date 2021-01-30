@@ -4,15 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a software engineer with over a decade of experience in application development. worked with different tech stacks, designing solutions for different industries in the MEA region including banking, healthcare, and transportation.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I speak Arabic, English, French, and Code 👨🏼‍💻
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+- [Blog](https://kamhawinotes.com/)
+- [Stack Overflow](https://stackoverflow.com/story/mkamhawi)
+- [LinkedIn](https://www.linkedin.com/in/mkamhawi/)
+- [Twitter](https://twitter.com/mkamhawi)
 
 
-[jekyll-organization]: https://github.com/jekyll
