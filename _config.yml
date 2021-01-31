@@ -93,6 +93,7 @@ plugins:
 #   - vendor/ruby/
 
 microsoft_bing_verification: '58304BEBE805F5226043CF1198B75B76'
+microsoft_clarity_id: '57tip0zv6o'
 
 google_analytics:
   id: 'UA-97464899-1'     # Fill with your Google Analytics ID
