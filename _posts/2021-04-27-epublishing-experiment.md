@@ -25,8 +25,12 @@ For now, I am excited to list down the following titles by [Ezzat El Kamhawi](ht
 
 # Kindle titles
 
+Amazon Kindle is available on [iOS](https://apps.apple.com/us/app/amazon-kindle/id302584613){:target="_blank"} & [Android](https://play.google.com/store/apps/details?id=com.amazon.kindle){:target="_blank"}
+
 [![الأيك في المباهج والأحزان](/assets/images/alayk.jpg){:width="200px"}](https://alayk.page.link/kindle_alayk){:target="_blank"} | [![الحارس](/assets/images/the_guard.jpg){:width="200px"}](https://alayk.page.link/kindle_guard){:target="_blank"} | [![البحر خلف الستائر](/assets/images/the_sea_behind_the_curtains.jpg){:width="200px"}](https://alayk.page.link/kindle_sea){:target="_blank"}
 
 # Google play titles
+
+Google Play Books is available on [iOS](https://apps.apple.com/us/app/google-play-books/id400989007){:target="_blank"} & [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.books){:target="_blank"}
 
 [![الأيك في المباهج والأحزان](/assets/images/alayk.jpg){:width="200px"}](https://alayk.page.link/google_alayk){:target="_blank"} | [![الحارس](/assets/images/the_guard.jpg){:width="200px"}](https://alayk.page.link/google_guard){:target="_blank"} | [![البحر خلف الستائر](/assets/images/the_sea_behind_the_curtains.jpg){:width="200px"}](https://alayk.page.link/google_sea){:target="_blank"} | [![مدينة اللذة](/assets/images/city_of_pleasure.jpg){:width="200px"}](https://alayk.page.link/google_city){:target="_blank"}
