@@ -9,7 +9,7 @@ I am a software engineer with over a decade of experience in application develop
 I speak Arabic, English, French, and Code 👨🏼‍💻
 
 - [Blog](https://kamhawinotes.com/)
-- [Stack Overflow](https://stackoverflow.com/story/mkamhawi)
+- [Polywork](https://www.polywork.com/mkamhawi/)
 - [LinkedIn](https://www.linkedin.com/in/mkamhawi/)
 - [Twitter](https://twitter.com/mkamhawi)
 

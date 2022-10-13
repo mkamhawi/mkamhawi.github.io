@@ -35,7 +35,9 @@ layout: default
 
           <!-- page views -->
           {% if site.google_analytics.pv.enabled %}
-          <span id="pv" class="pageviews"><i class="fas fa-spinner fa-spin fa-fw"></i></span>
+          <span id="pv" class="pageviews">
+            <svg xmlns="http://www.w3.org/2000/svg" width="0.97em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1664 1728"><path fill="currentColor" d="M462 1394q0 53-37.5 90.5T334 1522q-52 0-90-38t-38-90q0-53 37.5-90.5T334 1266t90.5 37.5T462 1394zm498 206q0 53-37.5 90.5T832 1728t-90.5-37.5T704 1600t37.5-90.5T832 1472t90.5 37.5T960 1600zM256 896q0 53-37.5 90.5T128 1024t-90.5-37.5T0 896t37.5-90.5T128 768t90.5 37.5T256 896zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5T1202 1394t37.5-90.5t90.5-37.5t90.5 37.5t37.5 90.5zM494 398q0 66-47 113t-113 47t-113-47t-47-113t47-113t113-47t113 47t47 113zm1170 498q0 53-37.5 90.5T1536 1024t-90.5-37.5T1408 896t37.5-90.5T1536 768t90.5 37.5T1664 896zm-640-704q0 80-56 136t-136 56t-136-56t-56-136t56-136T832 0t136 56t56 136zm530 206q0 93-66 158.5T1330 622q-93 0-158.5-65.5T1106 398q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"/></svg>
+          </span>
           {% endif %}
 
         </div>
@@ -57,7 +59,7 @@ layout: default
         <!-- categories -->
         {% if page.categories.size > 0 %}
         <div class="post-meta mb-3">
-          <i class="far fa-folder-open fa-fw mr-1"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M2.165 19.551c.186.28.499.449.835.449h15c.4 0 .762-.238.919-.606l3-7A.998.998 0 0 0 21 11h-1V8c0-1.103-.897-2-2-2h-6.655L8.789 4H4c-1.103 0-2 .897-2 2v13h.007a1 1 0 0 0 .158.551zM18 8v3H6c-.4 0-.762.238-.919.606L4 14.129V8h14z"/></svg>
           {% for category in page.categories %}
             <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
             {%- unless forloop.last -%}, {%- endunless -%}
@@ -68,7 +70,7 @@ layout: default
         <!-- tags -->
         {% if page.tags.size > 0 %}
         <div class="post-tags">
-          <i class="fa fa-tags fa-fw mr-1"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3z"/><path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043l-7.457-7.457z"/></g></svg>
           {% for tag in page.tags %}
           <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
             class="post-tag no-text-decoration" >

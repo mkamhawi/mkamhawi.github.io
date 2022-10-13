@@ -6,8 +6,14 @@
 <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">
   <a href="{{ site.url }}{url}">{title}</a>
   <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">
-    <div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div>
-    <div><i class="fa fa-tag fa-fw"></i>{tags}</div>
+    <div class="mr-sm-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2z"/></svg>
+      {categories}
+    </div>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3z"/><path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043l-7.457-7.457z"/></g></svg>
+      {tags}
+    </div>
   </div>
   <p>{snippet}</p>
 </div>

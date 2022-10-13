@@ -225,7 +225,7 @@
   vertical-align: middle;
   user-select: none;
 
-  i {
+  svg {
     font-weight: 400;
   }
 
@@ -237,12 +237,12 @@
       }
       &:hover {
         text-decoration: none;
-        > i {
+        > svg {
           @extend %btn-share-hovor;
         }
       }
     }
-    > i {
+    > svg {
       padding-top: 0.35rem;
       &:hover {
         @extend %btn-share-hovor;
