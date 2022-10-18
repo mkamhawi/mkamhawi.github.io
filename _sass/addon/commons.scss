@@ -878,7 +878,7 @@ $sidebar-display: "sidebar-display";
     font-size: 0.9rem;
     color: var(--search-icon-color);
   }
-  .fa-times-circle { /* button 'clean up' */
+  .clear-search { /* button 'clean up' */
     visibility: hidden;
   }
 }
@@ -1197,7 +1197,7 @@ $sidebar-display: "sidebar-display";
     &.loaded ~ a {
       margin-right: 1rem;
     }
-    .fa-times-circle {
+    .clear-search {
       right: 5.2rem;
     }
   }
@@ -1436,7 +1436,7 @@ $sidebar-display: "sidebar-display";
     }
   }
 
-  #search-wrapper .fa-times-circle {
+  #search-wrapper .clear-search {
     right: 2.6rem;
   }
 
