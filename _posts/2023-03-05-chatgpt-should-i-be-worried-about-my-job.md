@@ -17,8 +17,8 @@ I got access to chatGPT using the new chat section in [bing.com](https://www.bin
 
 In a few seconds I got my wish fulfilled! not only did it correctly construct the app, it figured out the available categories in [themoviedb.org API](https://www.themoviedb.org/documentation/api){:target="_blank"} and incorporated that in the code, categories I intentionally did not mention in my command.
 
-![ChatGPT response](/assets/images/chatgpt_2.jpeg){:width="550px" .center}
-![ChatGPT response](/assets/images/chatgpt_3.jpeg){:width="550px" .center}
+![ChatGPT response](/assets/images/chatgpt_2.jpeg){:width="600px" .center}
+![ChatGPT response](/assets/images/chatgpt_3.jpeg){:width="600px" .center}
 
 For comparison (and I am really sorry to say that) I wrote [the same angular application](https://github.com/mkamhawi/angular-movies-app){:target="_blank"} 6 years ago in 2 days while learning angular, and I have been updating the implementation every now and then to keep up with [the framework](https://angular.io/){:target="_blank"} updates and update my implementation style.
 
@@ -41,3 +41,11 @@ What happened because of the Gutenberg press could actually be observed in Softw
 What I think chatGPT will do is similar to the examples above. these advancements allow humans to think and work on higher levels of abstraction, as a software engineer I should be able to come up with ideas on a higher frequency and use chatGPT to develop and ship more proof of concepts, more MVPs, without having to worry about data structures, flow of code, or coding convention, it allows us to think and work on a different level, higher than assembly, higher than JavaScript.
 
 As a software engineer I am not worried about my job or career by technologies like chatGPT, I am actually excited, and I think you should be too.
+
+**UPDATE: I actually discussed this article with ChatGPT, I include the below snapshots of the limited conversation (Microsoft limits the conversation now by 8 queries), you be the judge if ChatGPT understood my ideas and critiqued this article well:**
+
+![ChatGPT article discussion 1](/assets/images/chatgpt_article_discussion_1.jpeg){:width="600px" .center}
+![ChatGPT article discussion 2](/assets/images/chatgpt_article_discussion_2.jpeg){:width="600px" .center}
+![ChatGPT article discussion 3](/assets/images/chatgpt_article_discussion_3.jpeg){:width="600px" .center}
+![ChatGPT article discussion 4](/assets/images/chatgpt_article_discussion_4.jpeg){:width="600px" .center}
+![ChatGPT article discussion 5](/assets/images/chatgpt_article_discussion_5.jpeg){:width="600px" .center}
