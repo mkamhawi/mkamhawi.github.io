@@ -17,8 +17,8 @@ I got access to chatGPT using the new chat section in [bing.com](https://www.bin
 
 In a few seconds I got my wish fulfilled! not only did it correctly construct the app, it figured out the available categories in [themoviedb.org API](https://www.themoviedb.org/documentation/api){:target="_blank"} and incorporated that in the code, categories I intentionally did not mention in my command.
 
-![ChatGPT response](/assets/images/chatgpt2.jpeg){:width="550px" .center}
-![ChatGPT response](/assets/images/chatgpt3.jpeg){:width="550px" .center}
+![ChatGPT response](/assets/images/chatgpt_2.jpeg){:width="550px" .center}
+![ChatGPT response](/assets/images/chatgpt_3.jpeg){:width="550px" .center}
 
 For comparison (and I am really sorry to say that) I wrote [the same angular application](https://github.com/mkamhawi/angular-movies-app){:target="_blank"} 6 years ago in 2 days while learning angular, and I have been updating the implementation every now and then to keep up with [the framework](https://angular.io/){:target="_blank"} updates and update my implementation style.
 
