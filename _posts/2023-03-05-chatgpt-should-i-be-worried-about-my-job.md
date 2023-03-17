@@ -40,12 +40,14 @@ What happened because of the Gutenberg press could actually be observed in Softw
 
 What I think chatGPT will do is similar to the examples above. these advancements allow humans to think and work on higher levels of abstraction, as a software engineer I should be able to come up with ideas on a higher frequency and use chatGPT to develop and ship more proof of concepts, more MVPs, without having to worry about data structures, flow of code, or coding convention, it allows us to think and work on a different level, higher than assembly, higher than JavaScript.
 
-As a software engineer I am not worried about my job or career by technologies like chatGPT, I am actually excited, and I think you should be too.
+As a software engineer I am not worried about my job or career by technologies like ChatGPT, I am actually excited, and I think you should be too.
 
-**UPDATE: I actually discussed this article with ChatGPT, I include the below snapshots of the limited conversation (Microsoft limits the conversation now by 8 queries), you be the judge if ChatGPT understood my ideas and critiqued this article well:**
+**UPDATE:** I actually discussed this article with ChatGPT, I include the below snapshots of the limited conversation (Microsoft limits the conversation now by 8 queries), you be the judge if ChatGPT understood my ideas and critiqued this article well:
 
 ![ChatGPT article discussion 1](/assets/images/chatgpt_article_discussion_1.jpeg){:width="600px" .center}
 ![ChatGPT article discussion 2](/assets/images/chatgpt_article_discussion_2.jpeg){:width="600px" .center}
 ![ChatGPT article discussion 3](/assets/images/chatgpt_article_discussion_3.jpeg){:width="600px" .center}
 ![ChatGPT article discussion 4](/assets/images/chatgpt_article_discussion_4.jpeg){:width="600px" .center}
 ![ChatGPT article discussion 5](/assets/images/chatgpt_article_discussion_5.jpeg){:width="600px" .center}
+
+**Update 2:** [Microsoft confirmed](https://blogs.bing.com/search/march_2023/Confirmed-the-new-Bing-runs-on-OpenAI%E2%80%99s-GPT-4){:target="_blank"} that the new bing has been running GPT-4 for the past 5 weeks. so the interactions described in this post are with GPT-4.
