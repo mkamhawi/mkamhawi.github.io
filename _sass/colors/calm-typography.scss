@@ -54,8 +54,11 @@
 
   /* Posts */
   --btn-share-hover-color: var(--link-color);
+  --card-bg: #d9cfc0;
+  --card-header-bg: #e3dace;
   --card-border-color: #b9a999;
   --card-box-shadow: rgba(139, 115, 85, 0.35);
+  --categories-border: var(--card-border-color);
   --label-color: #4a3f33;
   --relate-post-date: rgba(74, 63, 51, 0.6);
   --tag-bg: rgba(0, 0, 0, 0.075);
@@ -86,5 +89,33 @@
   nav[data-toggle=toc] .nav > li > a:hover {
     color: var(--toc-highlight) !important;
     border-left-color: var(--toc-highlight) !important;
+  }
+
+  /* categories */
+  .categories.card,
+  .list-group-item {
+    background-color: var(--card-bg);
+  }
+
+  .categories {
+    .card-header {
+      background-color: var(--card-header-bg);
+    }
+    .list-group-item {
+      border-color: var(--categories-border);
+      &:last-child {
+        border-bottom-color: var(--card-bg);
+      }
+    }
+  }
+
+  #archives li:nth-child(odd) {
+    background-image: linear-gradient(
+      to left,
+      var(--body-bg),
+      var(--card-bg),
+      var(--card-bg),
+      var(--card-bg),
+      var(--body-bg));
   }
 } // calm-scheme
