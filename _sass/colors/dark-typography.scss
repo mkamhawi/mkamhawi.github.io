@@ -36,6 +36,8 @@
   /* Sidebar */
   --nav-cursor-color: rgb(183, 182, 182);
   --sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
+  --sidebar-link-color: rgba(255, 255, 255, 0.5);
+  --sidebar-link-hover-color: #fff;
 
   /* Top Bar */
   --topbar-text-color: var(--text-color);
@@ -84,6 +86,8 @@
 
   /* Footer */
   --footer-link: rgb(171, 171, 171);
+  --footer-text-color: #7a7b7d;
+  --breadcrumb-color: gray;
 
   .post-content img {
     filter: brightness(90%);

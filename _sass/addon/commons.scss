@@ -105,6 +105,10 @@ a {
   @extend %link-color;
 }
 
+.text-muted {
+  color: var(--text-muted-color) !important;
+}
+
 img {
   max-width: 100%;
 }
@@ -125,7 +129,7 @@ footer {
   padding: 0 1rem;
   height: $footer-height;
   font-size: 0.8rem;
-  color: #7a7b7d;
+  color: var(--footer-text-color);
   background-color: var(--footer-bg-color);
 
   > div.d-flex {
@@ -202,8 +206,8 @@ footer {
     padding: 0.3rem 0.5rem;
     margin: 0 0.35rem 0.5rem 0;
     &:hover {
-      background-color: #2a408e;
-      border-color: #2a408e;
+      background-color: var(--link-hover-color);
+      border-color: var(--link-hover-color);
       color: #fff;
       transition: none;
     }
@@ -504,7 +508,7 @@ footer {
 
     border-bottom: none;
     text-decoration: none;
-    color: #d2603a;
+    color: var(--link-hover-color);
   }
 }
 
@@ -605,7 +609,7 @@ $sidebar-display: "sidebar-display";
     &:hover {
       @include no-text-decoration;
 
-      color: #fff;
+      color: var(--sidebar-link-hover-color);
     }
   }
 
@@ -676,12 +680,12 @@ $sidebar-display: "sidebar-display";
     height: $tab-height;
     &:hover {
       .nav-link {
-        color: #f8f9facf;
+        color: var(--sidebar-link-hover-color);
       }
     }
     &.active {
       .nav-link {
-        color: #fcfcfc;
+        color: var(--sidebar-link-hover-color);
       }
     }
   }
@@ -843,7 +847,7 @@ $sidebar-display: "sidebar-display";
 
   #breadcrumb {
     font-size: 1rem;
-    color: gray;
+    color: var(--breadcrumb-color);
     padding-left: 0.5rem;
 
     a:hover {
