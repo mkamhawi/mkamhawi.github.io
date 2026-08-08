@@ -37,7 +37,7 @@ jobs:
 
       - name: Bundle Install
         run: |
-          gem update --system
+          gem update --system 3.4.22
           bundle config path ${{ env.GEMS_PATH }}
           bundle install --jobs 4 --retry 3
 
