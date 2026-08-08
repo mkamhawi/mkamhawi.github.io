@@ -11,43 +11,11 @@
   class ModeToggle {
     static get MODE_KEY() { return "mode"; }
     static get DARK_MODE() { return "dark"; }
-    static get CALM_MODE() { return "calm"; }
 
     constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setCalm();
-          }
-        }
+      if (this.isDarkMode) {
+        this.setDark();
       }
-
-      var self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addListener(function() {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setCalm();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.updateMermaid();
-      });
-
     } /* constructor() */
 
 
@@ -57,40 +25,17 @@
     }
 
     setCalm() {
-      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.CALM_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.CALM_MODE);
-    }
-
-    clearMode() {
       $('html').removeAttr(ModeToggle.MODE_KEY);
       sessionStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
-    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
-
-    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
-
     get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; }
-
-    get isCalmMode() { return this.mode == ModeToggle.CALM_MODE; }
-
-    get hasMode() { return this.mode != null; }
 
     get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
 
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode
-        || (!this.hasMode && this.isSysDarkPrefer) ) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.CALM_MODE;
-      }
-    }
-
     updateMermaid() {
       if (typeof mermaid !== "undefined") {
-        let expectedTheme = (this.modeStatus === ModeToggle.DARK_MODE? "dark" : "default");
+        let expectedTheme = (this.isDarkMode ? "dark" : "default");
         let config = { theme: expectedTheme };
 
         /* re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */
@@ -106,28 +51,10 @@
     }
 
     flipMode() {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isCalmMode) {
-            this.clearMode();
-          } else {
-            this.setCalm();
-          }
-
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
-
+      if (this.isDarkMode) {
+        this.setCalm();
       } else {
-        if (this.isSysDarkPrefer) {
-          this.setCalm();
-        } else {
-          this.setDark();
-        }
+        this.setDark();
       }
 
       this.updateMermaid();

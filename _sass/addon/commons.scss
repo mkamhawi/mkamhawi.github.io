@@ -30,17 +30,6 @@ html[mode=dark] {
   @include mode-toggle(true);
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not([mode]),
-  html[mode=dark] {
-    @include mode-toggle(true);
-  }
-
-  html[mode=calm] {
-    @include mode-toggle();
-  }
-}
-
 :root {
   font-size: 16px;
 }

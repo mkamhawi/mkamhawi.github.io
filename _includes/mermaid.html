@@ -7,9 +7,7 @@
   $(function() {
     let initTheme = "default";
 
-    if ($("html[mode=dark]").length > 0
-      || ($("html[mode]").length == 0
-        && window.matchMedia("(prefers-color-scheme: dark)").matches ) ) {
+    if ($("html[mode=dark]").length > 0) {
       initTheme = "dark";
     }
 
