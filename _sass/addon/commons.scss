@@ -12,7 +12,7 @@
     }
 
   } @else {
-    @include light-scheme;
+    @include calm-scheme;
 
     .mode-toggle {
       transform: none;
@@ -22,7 +22,7 @@
 }
 
 html:not([mode]),
-html[mode=light] {
+html[mode=calm] {
   @include mode-toggle();
 }
 
@@ -36,7 +36,7 @@ html[mode=dark] {
     @include mode-toggle(true);
   }
 
-  html[mode=light] {
+  html[mode=calm] {
     @include mode-toggle();
   }
 }

@@ -1,8 +1,8 @@
 /*
- * The syntax light mode typography colors
+ * The syntax calm mode typography colors
  */
 
-@mixin light-scheme {
+@mixin calm-scheme {
   /* Common */
   --body-bg: #cabbac;
   --mask-bg: #c1c3c5;
@@ -87,4 +87,4 @@
     color: var(--toc-highlight) !important;
     border-left-color: var(--toc-highlight) !important;
   }
-} // light-scheme
+} // calm-scheme

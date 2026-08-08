@@ -49,7 +49,7 @@ social:
 
 timezone: Africa/Cairo
 
-theme_mode:   # [light|dark]
+theme_mode:   # [calm|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url

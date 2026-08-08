@@ -1,5 +1,5 @@
 <!--
-  Switch the mode between dark and light.
+  Switch the mode between dark and calm.
 -->
 
 <a style="cursor:pointer;" class="mode-toggle">
@@ -11,7 +11,7 @@
   class ModeToggle {
     static get MODE_KEY() { return "mode"; }
     static get DARK_MODE() { return "dark"; }
-    static get LIGHT_MODE() { return "light"; }
+    static get CALM_MODE() { return "calm"; }
 
     constructor() {
       if (this.hasMode) {
@@ -21,7 +21,7 @@
           }
         } else {
           if (this.isSysDarkPrefer) {
-            this.setLight();
+            this.setCalm();
           }
         }
       }
@@ -38,7 +38,7 @@
 
           } else {
             if (self.isSysDarkPrefer) {
-              self.setLight();
+              self.setCalm();
             }
           }
 
@@ -56,9 +56,9 @@
       sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
     }
 
-    setLight() {
-      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    setCalm() {
+      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.CALM_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.CALM_MODE);
     }
 
     clearMode() {
@@ -72,7 +72,7 @@
 
     get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; }
 
-    get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; }
+    get isCalmMode() { return this.mode == ModeToggle.CALM_MODE; }
 
     get hasMode() { return this.mode != null; }
 
@@ -84,7 +84,7 @@
         || (!this.hasMode && this.isSysDarkPrefer) ) {
         return ModeToggle.DARK_MODE;
       } else {
-        return ModeToggle.LIGHT_MODE;
+        return ModeToggle.CALM_MODE;
       }
     }
 
@@ -108,10 +108,10 @@
     flipMode() {
       if (this.hasMode) {
         if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
+          if (this.isCalmMode) {
             this.clearMode();
           } else {
-            this.setLight();
+            this.setCalm();
           }
 
         } else {
@@ -124,7 +124,7 @@
 
       } else {
         if (this.isSysDarkPrefer) {
-          this.setLight();
+          this.setCalm();
         } else {
           this.setDark();
         }
